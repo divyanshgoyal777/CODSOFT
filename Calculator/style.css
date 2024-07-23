@@ -1,0 +1,112 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+.calculator {
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+    border: 1px solid rgb(185, 184, 184);
+    max-width: 360px;
+    margin: 20px;
+}
+
+.display {
+    background-color: #333;
+    color: #fff;
+    text-align: right;
+    padding: 20px;
+    font-size: 3.5em;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#display {
+    width: 100%;
+    border: none;
+    background: none;
+    color: #fff;
+    font-size: 0.7em;
+    text-align: right;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+    background-color: #e6e6e6;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.btn {
+    background-color: #f9f9f9;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover {
+    background-color: #ddd;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    background-color: #ccc;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+}
+
+.btn.operator {
+    background-color: #ff9800;
+    color: #fff;
+}
+
+.btn.operator:hover {
+    background-color: #e68900;
+}
+
+.btn.operator:active {
+    background-color: #cc7a00;
+}
+
+.btn.equal {
+    background-color: #4caf50;
+    color: #fff;
+    grid-column: span 4;
+}
+
+.btn.equal:hover {
+    background-color: #45a049;
+}
+
+.btn.equal:active {
+    background-color: #3e8e41;
+}
+
+@media (max-width: 480px) {
+    .btn {
+        padding: 15px;
+        font-size: 1.2em;
+    }
+
+    .display {
+        padding: 15px;
+        font-size: 4em;
+    }
+}
